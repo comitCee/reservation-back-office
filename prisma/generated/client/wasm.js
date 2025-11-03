@@ -223,7 +223,7 @@ const config = {
       "value": "prisma-client-js"
     },
     "output": {
-      "value": "C:\\Users\\DELL\\WebstormProjects\\reservation-system\\back-office\\prisma\\generated\\client",
+      "value": "C:\\Users\\DELL\\WebstormProjects\\reservation-system\\front-office\\generated\\client",
       "fromEnvVar": null
     },
     "config": {
@@ -237,12 +237,12 @@ const config = {
       }
     ],
     "previewFeatures": [],
-    "sourceFilePath": "C:\\Users\\DELL\\WebstormProjects\\reservation-system\\back-office\\prisma\\schema.prisma",
+    "sourceFilePath": "C:\\Users\\DELL\\WebstormProjects\\reservation-system\\front-office\\schema.prisma",
     "isCustomOutput": true
   },
   "relativeEnvPaths": {
-    "rootEnvPath": null,
-    "schemaEnvPath": "../../../.env"
+    "rootEnvPath": "../../.env",
+    "schemaEnvPath": "../../.env"
   },
   "relativePath": "../..",
   "clientVersion": "6.18.0",

@@ -2,8 +2,9 @@
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
 
 generator client {
-  provider = "prisma-client-js"
-  output   = "./generated/client"
+  provider      = "prisma-client-js"
+  output        = "./generated/client"
+  binaryTargets = ["native", "rhel-openssl-3.0.x"]
 }
 
 datasource db {
@@ -127,7 +128,7 @@ model Location {
   id               String   @id @default(cuid())
   name             String
   description      String?
-  maxDurationHours Int?     // Durée maximale de réservation en heures (ex: 5 = max 5h)
+  maxDurationHours Int? // Durée maximale de réservation en heures (ex: 5 = max 5h)
   color            String   @default("#3b82f6")
   textColor        String?
   commissionId     String
