@@ -22,7 +22,7 @@ const nunito = Nunito({
 });
 
 export const metadata: Metadata = {
-    metadataBase: new URL("admin-reservation-cee.vercel.app"), // À remplacer par votre URL
+    metadataBase: new URL("https://admin-reservation-cee.vercel.app"), // À remplacer par votre URL
 
     // Métadonnées de base
     title: {
