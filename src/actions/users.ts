@@ -217,7 +217,7 @@ export async function createUser(data: CreateUserInput) {
       }))
 
       await resend.emails.send({
-        from: "ESP Réservation <onboarding@resend.dev>",
+        from: "ESP Réservation <onboarding@shadowfit-app.space>",
         to: user.email,
         subject: "Bienvenue sur ESP Réservation - Vos identifiants de connexion",
         html
