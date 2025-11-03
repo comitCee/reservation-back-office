@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server"
 import { auth } from "@/lib/auth"
 import {deleteUser} from "@/actions/users";
+import {db} from "@/lib/db";
 
 // Routes publiques (accessibles sans authentification)
 const publicRoutes = [
@@ -46,7 +47,9 @@ export async function proxy(request: NextRequest) {
     commissionId: session.user.commissionId
   })
   if (session.user.role === "STUDENT" && !session.user.email.endsWith("@esp.sn")) {
-    await deleteUser(session.user.id)
+    await db.user.delete({
+      where: { id: session.user.id }
+    })
 
     // Rediriger directement vers /logout avec un paramètre d'erreur
     return NextResponse.redirect(new URL("/logout?error=wrong-role", request.url))
