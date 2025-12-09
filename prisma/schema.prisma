@@ -146,7 +146,7 @@ model Location {
 model Reservation {
   id              String   @id @default(uuid())
   title           String
-  description     String
+  description     String?
   start           DateTime
   end             DateTime
   status          Status   @default(PENDING)
